@@ -4,14 +4,14 @@ import pandas as pd
 import pickle
 import plotly.express as px
 from google import genai
-from dotenv import load_dotenv
+
 import os
 import time
 from google.genai.errors import ServerError
 
-load_dotenv()
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 MODEL_NAME = "models/gemini-flash-latest"
 
